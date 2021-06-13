@@ -61,10 +61,10 @@ kotlin {
         }
     }
 
-    js(BOTH) {
-        useCommonJs()
-        nodejs()
-    }
+//    js(BOTH) {
+//        useCommonJs()
+//        nodejs()
+//    }
 
     sourceSets {
         val commonMain by getting {
