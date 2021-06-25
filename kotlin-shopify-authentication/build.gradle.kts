@@ -60,7 +60,7 @@ kotlin {
             artifact(dokkaJar)
         }
     }
-
+//-- opted out js build
 //    js(BOTH) {
 //        useCommonJs()
 //        nodejs()
@@ -101,17 +101,18 @@ kotlin {
                 implementation("io.kotlintest:kotlintest-runner-junit5:3.3.2")
             }
         }
-        js().compilations["main"].defaultSourceSet {
-            dependencies {
-                implementation("io.ktor:ktor-client-js:$ktorVersion")
-                implementation(kotlin("stdlib-js"))
-            }
-        }
-        js().compilations["test"].defaultSourceSet {
-            dependencies {
-                implementation(kotlin("test-js"))
-            }
-        }
+//-- opted out js build
+//        js().compilations["main"].defaultSourceSet {
+//            dependencies {
+//                implementation("io.ktor:ktor-client-js:$ktorVersion")
+//                implementation(kotlin("stdlib-js"))
+//            }
+//        }
+//        js().compilations["test"].defaultSourceSet {
+//            dependencies {
+//                implementation(kotlin("test-js"))
+//            }
+//        }
     }
 }
 
