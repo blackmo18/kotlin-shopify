@@ -60,12 +60,12 @@ kotlin {
             artifact(dokkaJar)
         }
     }
-    js(IR) {
-        moduleName = "shopify-authentication"
-        useCommonJs()
-        nodejs()
-        binaries.executable( )
-    }
+//     js(IR) {
+//         moduleName = "shopify-authentication"
+//         useCommonJs()
+//         nodejs()
+//         binaries.executable( )
+//     }
 
     sourceSets {
         val commonMain by getting {
@@ -113,17 +113,17 @@ kotlin {
 //                implementation(npm("koa-router", "10.0.0"))
             }
         }
-        js().compilations["main"].defaultSourceSet {
-            dependencies {
-                implementation("io.ktor:ktor-client-js:$ktorVersion")
-                implementation(kotlin("stdlib-js"))
-            }
-        }
-        js().compilations["test"].defaultSourceSet {
-            dependencies {
-                implementation(kotlin("test-js"))
-            }
-        }
+//         js().compilations["main"].defaultSourceSet {
+//             dependencies {
+//                 implementation("io.ktor:ktor-client-js:$ktorVersion")
+//                 implementation(kotlin("stdlib-js"))
+//             }
+//         }
+//         js().compilations["test"].defaultSourceSet {
+//             dependencies {
+//                 implementation(kotlin("test-js"))
+//             }
+//         }
     }
 }
 
